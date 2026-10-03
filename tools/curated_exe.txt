@@ -1,0 +1,341 @@
+ntoskrnl.exe|Inti kernel NT (ring-0): memori virtual, penjadwalan thread, interrupt, I/O, keamanan objek
+winload.exe|Loader boot Windows mode BIOS; memuat boot manager lalu kernel
+winresume.exe|Melanjutkan boot dari hiberfil.sys saat sistem resume dari hibernasi
+wininit.exe|Windows Initialization; menjalankan perintah registry PendingFileRenameOperations saat boot
+winlogon.exe|Menangani logon interaktif dan notifikasi keamanan; rantai Winlogon, userinit, dan LSASS
+userinit.exe|Proses pertama di sesi pengguna; menjalankan program startup termasuk shell Explorer
+lsass.exe|Local Security Authority Subsystem; menyimpan kredensial, memvalidasi logon, menerbitkan token akses
+services.exe|Service Control Manager; memuat, menjalankan, dan menjadwalkan seluruh Windows service
+svchost.exe|Host proses untuk service DLL; satu proses dapat menampung beberapa service sekaligus
+smss.exe|Session Manager Subsystem; proses user-mode pertama, menyiapkan sesi lalu memicu csrss dan winlogon
+csrss.exe|Client/Server Runtime Subsystem; menangani Ctrl+Alt+Del, konsol, thread, shutdown, dan Win32 subsystem
+dwm.exe|Desktop Window Manager; komposisi desktop, transparansi, animasi, dan output multi-monitor
+conhost.exe|Console host modern yang menggambar serta menangani input untuk program konsol
+dllhost.exe|Proxy COM out-of-process; dipakai instantiate moniker ActiveX atau komponen di proses terpisah
+dllhst3g.exe|Legacy DLB host untuk jaringan dial-up 3G; nyaris tidak pernah dipakai
+taskhostw.exe|Host untuk background task pada level pengguna terjadwal
+sihost.exe|Shell Infrastructure Host; tray icon, toast notification, dan shell flyout
+RuntimeBroker.exe|Broker Creation; memvalidasi hak akses paket UWP sebelum proses aplikasi dijalankan
+spoolsv.exe|Print Spooler; menerima antrean cetak lalu meneruskannya ke driver printer
+spoolsvworker.exe|Worker proses modern untuk sistem pencetakan pada build Windows terbaru
+SearchIndexer.exe|Layanan Windows Search; membangun indeks konten untuk pencarian di Start dan Explorer
+SearchProtocolHost.exe|Menghubungkan klien protokol pencarian ke SearchIndexer untuk mengambil hasil
+SearchFilterHost.exe|Menjalankan filter pencarian pihak ketiga seperti docx, xlsx, dan pdf saat indeks diekstrak
+WerFault.exe|Windows Error Reporting; menampilkan dialog error lalu mengirim laporan ke Microsoft
+WerFaultSecure.exe|Varian WerFault pada sesi aman untuk kondisi blue screen atau boot loop
+wermgr.exe|Manajer pelaporan error Windows; dipakai WerFault untuk pengumpulan log
+rdpclip.exe|Clipboard remote desktop; menyalin teks dan bitmap antara mesin lokal dan sesi RDP
+msra.exe|Remote Assistance; meminta dan menerima bantuan jarak jauh
+sdclt.exe|Perintah BACKUP dan RESTORE pada direktori aktif
+wsreset.exe|Mengatur ulang cache dan registrasi aplikasi Microsoft Store
+wscript.exe|Windows Script Host; menjalankan skrip .vbs dan .js
+cscript.exe|Windows Script Host versi konsol untuk skrip .vbs dan .js
+mshta.exe|Menjalankan aplikasi HTML (HTA); berarti menjalankan kode HTML sebagai aplikasi
+cmd.exe|Command Processor Windows atau command prompt
+bash.exe|Shell Linux bawaan Windows yang dipakai lewat WSL
+wsl.exe|Launcher Windows Subsystem for Linux
+wslconfig.exe|Mengatur konfigurasi global WSL: memori, vCPU, jaringan, dan VM
+curl.exe|Client HTTP, HTTPS, FTP, dan SFTP berbasis cURL; dipakai debugging REST API
+ftp.exe|Client FTP konsol bawaan Windows
+tftp.exe|Client TFTP konsol
+telnet.exe|Client Telnet konsol
+wusa.exe|Windows Update Standalone Installer; menjalankan paket pembaruan .msu
+UsoClient.exe|Client Update Orchestrator Service; menjadwalkan serta memantau job pembaruan Windows
+wuauclt.exe|UI Windows Update Agent; memicu pemeriksaan pembaruan manual
+wuapihost.exe|Host Windows Update API; menjembatani antarmuka UWUI dengan pembaruan sistem
+WindowsUpdateElevatedInstaller.exe|Installer pembaruan Windows yang berjalan dengan hak elevasi
+WUDFHost.exe|Windows Unified Device Framework Host; menjalankan driver mode-user berbasis UWDF
+WUDFCompanionHost.exe|Host perangkat komplemen untuk framework UWDF
+MpSigStub.exe|Host stub penandatangan-an untuk validasi driver Microsoft Defender
+WinSAT.exe|Windows Assessment Toolkit; benchmark performa, penyimpanan, dan energi
+mstsc.exe|Remote Desktop Connection; klien protokol RDP
+TpmInit.exe|Inisialisasi TPM saat startup untuk Windows Hello dan enkripsi
+TpmTool.exe|Alat baris-perintah untuk mengelola TPM: daftar, reset, dan passphrase
+tpmvscmgr.exe|Virtual Secure Channel Manager untuk TPM yang dipakai BitLocker
+tpmvscmgrsvr.exe|Layanan host Virtual Secure Channel untuk TPM
+manage-bde.exe|BitLocker Drive Encryption CLI: status, enable, unlock, kunci pemulihan, dan header
+BitLockerDeviceEncryption.exe|Antarmuka Device Encryption atau BitLocker untuk Windows Pro
+BitLockerWizard.exe|Wizard enkripsi BitLocker
+BitLockerWizardElev.exe|Helper elevasi untuk BitLocker Wizard
+BdeHdCfg.exe|Configuration Tool BitLocker untuk computer group dan kebijakan
+BdeUISrv.exe|Layanan antarmuka untuk dialog BitLocker
+Bdeunlock.exe|Antarmuka membuka drive terenkripsi BitLocker
+fveprompt.exe|Prompt BitLocker saat diakses drive terenkripsi
+fvenotify.exe|Layanan pemberitahuan BitLocker
+MountVol.exe|Mengelola titik mount volume, drive letter, dan folder mount
+fsutil.exe|Utilitas tingkat rendah NTFS: hardlink, USN journal, sparse, quota, layout boot, dan repair
+chkdsk.exe|Memeriksa dan memperbaiki integritas file system NTFS atau FAT
+chkntfs.exe|Menampilkan dan mengubah jadwal pemeriksaan disk saat boot
+defrag.exe|Mengoptimasi dan defragmentasi volume
+dfrgui.exe|Launcher antarmuka Defragmenter
+diskpart.exe|Shell disk dan partisi berbasis skrip: create, delete, assign, dan clean
+diskperf.exe|Mengukur beban I/O disk untuk keperluan diagnostik
+disksnapshot.exe|Service snapshot penyimpanan untuk Storage Spaces
+diskusage.exe|Menganalisis penggunaan ruang disk per folder dan tipe file
+Dism.exe|Deployment Image Servicing and Management untuk perbaikan komponen Windows
+sfc.exe|System File Checker; memverifikasi dan mengganti file sistem yang rusak dari cache
+robocopy.exe|Penyalinan file massal dengan opsi /MIR, /ZB, /LOG, dan retry
+xcopy.exe|Menyalin file dan folder dengan opsi rekursif
+replace.exe|Mengganti file dengan versi lain sambil menyimpan cadangan
+esentutl.exe|Utilitas database ESE untuk defrag, compact, integrity, md5, dan copy
+odbcad32.exe|Administrator ODBC Data Sources; mengelola DSN dan driver
+odbcconf.exe|Utilitas konfigurasi ODBC untuk menambah driver dan DSN
+msconfig.exe|System Configuration dengan tab Boot, tab Services, dan startup
+msinfo32.exe|System Information; ringkasan hardware, driver, dan konfigurasi
+SystemPropertiesAdvanced.exe|System Properties Advanced untuk memori virtual, startup, dan environment
+SystemPropertiesComputerName.exe|System Properties Computer Name untuk rename komputer dan workgroup
+SystemPropertiesDataExecutionPrevention.exe|System Properties Data Execution Prevention
+SystemPropertiesHardware.exe|System Properties Hardware; pintasan ke Device Manager
+SystemPropertiesPerformance.exe|System Properties Performance untuk tampilan dan memori virtual
+SystemPropertiesProtection.exe|System Properties System Protection untuk System Restore
+SystemPropertiesRemote.exe|System Properties Remote untuk akses jarak jauh
+ComputerDefaults.exe|Host Control Panel Default Programs; dipanggil saat memilih aplikasi default
+OptionalFeatures.exe|Tools Windows Optional Features untuk menyalakan atau mematikan fitur Windows
+cleanmgr.exe|Disk Cleanup; menghapus file sementara, cache, dan thumbnail
+compact.exe|Menampilkan dan mengubah kompresi file NTFS
+attrib.exe|Menampilkan dan mengubah atribut file Hidden, System, Read-only, dan Archive
+icacls.exe|Menampilkan dan mengubah ACL serta kepemilikan file dan folder
+cacls.exe|Tool ACL lama pendahulu icacls untuk permission file
+takeown.exe|Mengambil kepemilikan file atau folder sebagai administrator
+efsui.exe|Antarmuka Encryption File System untuk encrypt dan decrypt file pengguna
+cipher.exe|Menampilkan dan mengubah status enkripsi EFS pada file
+rekeywiz.exe|Wizard untuk memindahkan home drive terenkripsi pengguna
+fodhelper.exe|Host Folder Options; sering dieksploitasi sebagai bypass UAC
+wlanext.exe|Extensi WLAN untuk mengelola frekuensi dan profil nirkabel
+wifitask.exe|Tugas nirkabel pada Wi-Fi task handler
+DeviceProperties.exe|Shell extension untuk halaman properti perangkat
+DevicePairingWizard.exe|Wizard pemasangan perangkat nirkabel
+DeviceCensus.exe|Mengumpulkan data inventaris perangkat keras
+DeviceEject.exe|Melepas perangkat yang sedang terhubung
+hdwwiz.exe|Hardware Wizard untuk memasang perangkat
+pnputil.exe|Utilitas Plug and Play untuk /add-driver, /enum-devices, dan /scan-devices
+newdev.exe|Install Device Wizard untuk memasang driver perangkat
+driverquery.exe|Menampilkan daftar driver yang terpasang
+DpiScaling.exe|Dialog penentuan DPI untuk aplikasi lawas
+dxdiag.exe|Diagnostic Information Explorer untuk DirectX, display, audio, driver, dan UEFI
+dispdiag.exe|Mendiagnosis masalah display
+colorcpl.exe|Dialog skema warna dan manajemen display
+ddodiag.exe|Diagnostik DirectShow untuk mesin video
+control.exe|Control Panel
+stordiag.exe|Diagnostik penyimpanan NVMe, SATA, dan USB; mengirim laporan ke Microsoft
+spaceutil.exe|Analisis penggunaan ruang penyimpanan untuk Storage Sense
+SpaceAgent.exe|Layanan pengukuran penggunaan penyimpanan untuk Storage Sense
+sethc.exe|System Configuration Hotkey; pintasan kemudah akses
+wbadmin.exe|Antarmuka baris-perintah Windows Backup
+wbengine.exe|Engine proses Windows Backup
+VSSVC.exe|Volume Shadow Copy Service; membuat snapshot volume
+vssadmin.exe|Manajemen Volume Shadow Copy dari baris perintah
+cmdkey.exe|Manajemen kredensial tersimpan untuk RDP dan share jaringan
+klist.exe|Menampilkan dan menghapus tiket kredensial Kerberos
+certreq.exe|Mengirim permintaan sertifikat atau CSR ke Certification Authority
+certutil.exe|Utilitas sertifikat untuk enumerate, import, export, dan issuance request
+dsregcmd.exe|Menampilkan status domain join dan AAD join mesin
+secinit.exe|Inisialisasi keamanan PC sebelum instalasi Windows
+secedit.exe|Utilitas konfigurasi keamanan untuk ekspor dan impor template keamanan
+setspn.exe|Menambahkan atau menghapus Service Principal Name pada akun Active Directory
+nltest.exe|Alat domain dan Directory Service untuk DC, trust, dan replikasi
+ndadmin.exe|Active Directory Domain Services Installation Wizard
+djoin.exe|Menjoinkan komputer ke domain secara offline
+net.exe|Perintah jaringan klasik seperti net use, net share, net user, dan net view
+net1.exe|Nama kedua net.exe untuk menghindari konflik fungsi di PowerShell
+netcfg.exe|Menginstal dan mengonfigurasi komponen jaringan
+netsh.exe|NET Shell untuk konfigurasi jaringan, firewall, WLAN, HTTP, dan portproxy
+netstat.exe|Menampilkan koneksi TCP dan UDP, tabel routing, dan statistik protokol
+ipconfig.exe|Menampilkan dan mengatur konfigurasi IP, DHCP, dan DNS
+nbtstat.exe|Diagnostik NetBIOS over TCP/IP
+whoami.exe|Mencetak identitas pengguna berupa domain, grup, dan SID
+HOSTNAME.EXE|Mencetak nama komputer NetBIOS
+route.exe|Menampilkan dan mengubah tabel routing IP
+ping.exe|Menguji konektivitas jaringan memakai ICMP
+TRACERT.EXE|Melacak jalur paket melalui router
+nslookup.exe|Menanyakan DNS untuk A, AAAA, MX, NS, TXT, dan SRV
+ARP.EXE|Menampilkan dan mengubah cache ARP
+getmac.exe|Menampilkan alamat MAC dari adapter jaringan
+snmptrap.exe|Pengirim pesan trap SNMP untuk pemantauan jaringan
+cmstp.exe|Memproses template manajemen Active Directory berupa ADMX dan GPO
+doskey.exe|Mendefinisikan macro dan riwayat perintah di command prompt
+choice.exe|Meminta pengguna memilih opsi di dalam batch script
+forfiles.exe|Menjalankan perintah untuk sekumpulan file terpilih
+timeout.exe|Menunda eksekusi script selama sejumlah detik
+waitfor.exe|Menunggu sinyal atau named object untuk sinkronisasi script
+msg.exe|Mengirim pesan popup ke sesi pengguna
+winver.exe|Menampilkan informasi versi Windows
+query.exe|Menampilkan informasi proses dan sesi
+quser.exe|Menampilkan sesi pengguna yang sedang login
+qwinsta.exe|Menampilkan sesi Terminal Services
+logoff.exe|Mengakhiri sesi pengguna yang sedang login
+rwinsta.exe|Menghapus sesi remote desktop pada server
+tskill.exe|Mengakhiri proses pada sesi Terminal Services
+tscon.exe|Menghubungkan sesi pengguna ke sesi Terminal Services lain
+tsdiscon.exe|Memutus sesi remote desktop dari server Terminal Server
+bcdboot.exe|Menulis file boot Windows ke volume EFI atau partisi sistem
+bcdedit.exe|Mengedit Boot Configuration Data untuk entry boot
+bootim.exe|Editor Boot Configuration Data versi lama
+perfmon.exe|Performance Monitor untuk charting realtime performance counters
+resmon.exe|Resource Monitor untuk monitoring CPU, memori, disk, dan jaringan per proses
+typeperf.exe|Mengambil nilai performance counter langsung ke konsol atau CSV
+logman.exe|Mengelola event trace session dan performance log
+tracerpt.exe|Mengubah file .etl menjadi laporan yang dapat dibaca
+wpr.exe|Windows Performance Recorder untuk merekam jejak sistem
+pcwrun.exe|Legacy Performance Counters Wizard untuk merekam jejak ETW
+taskmgr.exe|Task Manager
+taskkill.exe|Mengakhiri proses atau task dari konsol
+tasklist.exe|Menampilkan proses atau task yang berjalan
+at.exe|Menjadwalkan task lewat service Schedule yang sudah deprecated
+schtasks.exe|Menjadwalkan, menjalankan, dan menghapus task terjadwal
+powercfg.exe|Mengatur power plan, sleep, hibernate, dan shutdown
+mmc.exe|Microsoft Management Console sebagai host snap-in seperti services dan event viewer
+gpresult.exe|Menampilkan hasil Group Policy Reporting
+gpupdate.exe|Menerapkan ulang kebijakan grup pada komputer
+grpconv.exe|Mengonversi berkas konfigurasi grup user lokal ke format baru
+reg.exe|Editor registry dari baris perintah
+regini.exe|Mengimpor key registry dari file .ini
+regedt32.exe|Registry Editor
+regsvr32.exe|Mendaftarkan atau menghapus DLL COM di registry
+sigverif.exe|Memverifikasi tanda tangan digital file
+verclsid.exe|Menghapus atau memperbarui ProgID dari CLSID
+VaultCmd.exe|Alat untuk mengelola Windows Vault dari baris perintah
+UserAccountControlSettings.exe|Mengatur kontrol akun pengguna dan level UAC
+UserDataSource.exe|Sumber data pengguna untuk profil bersama
+UserAccountBroker.exe|Broker untuk dialog akun pengguna
+Utilman.exe|Utilitas Manager yang dapat dipanggil sebelum pengguna logon
+UtilitySessionMinLogon.exe|Utilitas untuk sesi login minimum pada skenario khusus
+msiexec.exe|Windows Installer Client untuk instalasi, perbaikan, dan uninstall paket MSI
+CustomInstallExec.exe|Eksekutor skrip kustom saat instalasi paket
+MRT.exe|Malware Removal Tool untuk memindai dan menghapus malware
+msdtc.exe|Host Microsoft Support Diagnostic Tool
+msdt.exe|Microsoft Support Diagnostic Tool yang sudah usang
+Magnify.exe|Lupa pembesar layar untuk aksesibilitas
+osk.exe|On-Screen Keyboard untuk aksesibilitas
+Narrator.exe|Pembaca layar untuk aksesibilitas
+ctfmon.exe|CTF Loader yang menjalankan IME atau input method editor untuk teks
+InputSwitchToastHandler.exe|Handler notifikasi pergantian metode input
+charmap.exe|Character Map untuk memasukkan karakter Unicode
+slui.exe|Shell UI host untuk dialog aktivasi, lokasi, dan troubleshooter
+smartscreen.exe|Antarmuka Microsoft Defender SmartScreen untuk peringatan keamanan unduhan
+consent.exe|Dialog persetujuan User Account Control saat elevate
+AppVClient.exe|Client App-V untuk menjalankan aplikasi yang divirtualisasi
+AppVDllSurrogate.exe|Surrogate DLL untuk aplikasi virtual App-V
+SyncAppvPublishingServer.exe|Sinkronisasi penerbitan aplikasi App-V
+SyncHost.exe|Layanan sinkronisasi OneDrive
+GameBarPresenceWriter.exe|Menulis status kehadiran pengguna ke Xbox Game Bar
+GameInputSvc.exe|Layanan input untuk Xbox Game Bar
+GamePanel.exe|Panel Xbox Game Bar
+LockAppHost.exe|Host aplikasi untuk layar kunci Windows
+LockScreenContentServer.exe|Layanan konten layar kunci
+LogonUI.exe|Antarmuka logon Windows
+ApplicationFrameHost.exe|Host untuk aplikasi UWP pada desktop
+backgroundTaskHost.exe|Host background task UWP pada sesi pengguna
+WWAHost.exe|Host aplikasi web Windows untuk paket UWP berbasis HTML
+MicrosoftEdgeBCHost.exe|Host background content untuk Microsoft Edge
+MicrosoftEdgeCP.exe|Host proses utama per tab Microsoft Edge
+MicrosoftEdgeDevTools.exe|Host DevTools Microsoft Edge
+MicrosoftEdgeSH.exe|Host shell Microsoft Edge
+MicrosoftWebDriver.exe|WebDriver Microsoft untuk pengujian otomatis browser
+OobeShellHost.exe|Host shell untuk Out-of-Box Experience saat penyiapan Windows
+CredentialEnrollmentManager.exe|Manajer enrolment kredensial perangkat
+CredentialUIBroker.exe|Broker UI enrolment kredensial
+credwiz.exe|Wizard pembuatan kredensial Windows untuk PIN, sertifikat, dan Windows Hello
+MDEServer.exe|Layanan backend Windows Hello untuk biometrik
+MDMAgent.exe|Agent Device Management untuk jembatan MDM
+MDMAppInstaller.exe|Installer aplikasi untuk jembatan MDM
+MdmDiagnosticsTool.exe|Alat diagnostik manajemen perangkat
+omadmclient.exe|OMA DM Client untuk manajemen perangkat seluler
+omadmprc.exe|OMA DM Proxy untuk proxy DM
+AssignedAccessGuard.exe|Penjaga mode kios untuk fitur assigned access
+Eap3Host.exe|Host EAP atau Extensible Authentication Protocol untuk supplicant
+EaseOfAccessDialog.exe|Dialog pengaturan kemudah akses
+CompatTelRunner.exe|Peng awhile telemetry Application Compatibility
+CompMgmtLauncher.exe|Launcher Computer Management atau compmgmt.msc
+CustomShellHost.exe|Host shell kustom untuk aplikasi desktop
+difx64.exe|Driver Install Frameworks untuk paket driver
+InfDefaultInstall.exe|Memasang default class dan filter untuk file INF
+AxInstUI.exe|Antarmuka ActiveX Install untuk registered controls
+setupcl.exe|Konfigurasi Setup untuk instalasi dan image Windows
+esimtool.exe|Alat konfigurasi eSIM untuk operator seluler
+eudcedit.exe|Editor EUDC untuk font karakter khusus
+directxdatabaseupdater.exe|Memperbarui database DirectX pada runtime DirectX
+dxgiadaptercache.exe|Memories cache adapter GPU DirectX
+MultiDigiMon.exe|Control Panel untuk monitor digital multi-digi
+wiaacmgr.exe|Manajer Kamera WIA untuk transfer foto dari perangkat
+wiawow64.exe|Layanan transfer gambar 32-bit untuk WIA
+winrs.exe|Windows Remote Shell untuk menjalankan perintah pada host remote
+winrshost.exe|Host proses untuk Windows Remote Shell
+rdpinit.exe|Engine Remote Desktop untuk sesi konsol
+rdpinput.exe|Handler input keyboard dan mouse untuk sesi RDP
+rdpshell.exe|Shell untuk perintah Remote Desktop
+rdpsign.exe|Pembuat file RDP yang ditandatangani
+RdpSa.exe|Proses Remote Assistance untuk sesi desktop
+RdpSaProxy.exe|Proxy Remote Assistance
+rstrui.exe|Antarmuka sesi Remote Desktop
+TCPSVCS.EXE|Layanan SMB dan NetBIOS over TCP untuk berbagi file lawas
+tcblaunch.exe|Layanan tunneling untuk Bluetooth
+tcmsetup.exe|Setup klien TAPI untuk Telephony API
+sndvol.exe|Pengatur volume suara
+psr.exe|Problem Steps Recorder untuk merekam langkah reproduksi masalah
+systeminfo.exe|Menampilkan konfigurasi sistem, hotfix, dan informasi build
+label.exe|Mengubah label volume drive
+lodctr.exe|Memuat dan melepas performance counter DLL versi 32-bit
+unlodctr.exe|Memuat dan melepas performance counter DLL versi 64-bit
+ktmutil.exe|Utilitas Kernel Transaction Manager untuk TxF
+lpkinstall.exe|Memasang font untuk produk berlisensi LPK
+lpksetup.exe|Setup dan konfigurasi font LPK
+sppsvc.exe|Layanan Lisensi Produk dan Software Protection
+sxstrace.exe|Pelacakan Side-by-Side untuk assembly SxS
+ReAgentc.exe|Agent Windows Recovery Environment untuk reset dan pemulihan
+recdisc.exe|Membuat media pemulihan Windows
+RecoveryDrive.exe|Membuat drive pemulihan berbasis file
+srdelayed.exe|System Restore untuk file yang baru saja dihapus
+SrTasks.exe|Tugas terjadwal System Restore
+ReFsDedupSvc.exe|Layanan deduplikasi ReFS
+refsutil.exe|Utilitas ReFS untuk pemeriksaan filesystem
+makecab.exe|Membuat arsip Cabinet untuk Windows Update dan MSI
+extrac32.exe|Mengekstrak arsip Cabinet
+expand.exe|Mengekstrak file .cab
+wextract.exe|Mengekstrak paket pembaruan .msu dan .cab
+fc.exe|Perbandingan dua file secara byte, baris, atau teks
+find.exe|Mencari file dan folder pada disk
+findstr.exe|Mencari teks di dalam file atau grep Windows
+sort.exe|Mengurutkan isi file teks
+where.exe|Mencari lokasi executable, folder, atau file
+openfiles.exe|Menampilkan atau melacak file yang sedang dibuka
+subst.exe|Membuat drive virtual yang memetakan ke sebuah folder
+proquota.exe|Mengatur kuota disk per pengguna
+eventvwr.exe|Event Viewer
+rundll32.exe|Menjalankan fungsi yang diekspor sebuah DLL
+runexehelper.exe|Helper untuk menjalankan executable dari shell
+RunLegacyCPLElevated.exe|Wrapper untuk menjalankan tool konsol lama dengan elevasi
+runonce.exe|Menjalankan perintah sekali setelah logon berikutnya
+mblctr.exe|Monitor Bytes Loaded; menandai pending reboot untuk servicing
+msfeedssync.exe|Menyinkronkan RSS Feed
+ie4uinit.exe|Inisialisasi USERINIT untuk Internet Explorer legacy
+ie4ushowIE.exe|Menampilkan atau menyembunyikan UI IE legacy
+IESettingSync.exe|Menyinkronkan pengaturan Internet Explorer
+WinBioDataModelOOBE.exe|Data model biometrik untuk pengalaman OOBE Windows Hello
+BioIso.exe|Ruang biometrik terisolasi untuk Windows Hello
+gpscript.exe|Menjalankan perintah pada mesin jarak jauh sesuai Group Policy
+UevAgentPolicyGenerator.exe|Generator kebijakan Update Experience atau UE-V
+UevAppMonitor.exe|Pemantau aplikasi untuk Update Experience
+UevTemplateBaselineGenerator.exe|Generator baseline template Update Experience
+UevTemplateConfigItemGenerator.exe|Generator item konfigurasi template UE-V
+UCConfigTask.exe|Tugas konfigurasi untuk kepatuhan terpadu
+ucsvc.exe|Layanan pembaruan yang memvalidasi konfigurasi Windows Update
+wecutil.exe|Alat pengumpul event untuk Windows Event Collector
+wevtutil.exe|Utilitas Windows Event Log untuk ekspor, hapus, dan arsip log
+WSManHTTPConfig.exe|Mengatur WinRM untuk listener HTTP dan HTTPS
+wsmprovhost.exe|Host PowerShell remote untuk WinRM
+WSCollect.exe|Pengumpul diagnostik Microsoft Store
+sudo.exe|Perintah sudo untuk Windows 11 yang menjalankan dengan hak admin
+tar.exe|Arsip BSD tar bawaan Windows
+AppInstallerBackgroundUpdate.exe|App Installer atau winget memperbarui dirinya di latar belakang
+esimtool.exe|Alat konfigurasi eSIM milik operator seluler
+notepad.exe|Editor teks bawaan Windows; sejak Windows 11 24H2 memakai tab, tema, dan undo modern
+ScriptRunner.exe|Menjalankan skrip untuk provisioning dan alur setup Windows
+ShellAppRuntime.exe|Runtime aplikasi shell untuk host UWP; menangani aktivasi dan relaunch
+ShellHost.exe|Host shell untuk komponen startup shell
+SlideToShutDown.exe|Layar kunci tambahan yang offer tombol power sebelum shutdown
+UPPrinterInstaller.exe|Installer printer untuk Universal Print
+SystemUWPLauncher.exe|Launcher aplikasi UWP dari system context
+rgnupdt.exe|Pembarui Region pada Windows secara otomatis
+PinEnrollmentBroker.exe|Broker pendaftaran PIN untuk Windows Hello
+readCloudDataSettings.exe|Membaca pengaturan sinkronisasi data cloud OneDrive

@@ -1,0 +1,447 @@
+ntdll.dll|Native API NT; Hearts of Windows. Semua syscall Windows melewati DLL ini, termasuk yang tidak terdokumentasi
+kernel32.dll|Kernel32 API Client DLL; CreateFile, CreateProcess, VirtualAlloc, Heap*, ExitProcess, dan inti Win32
+KernelBase.dll|Implementasi dasar Win32 yang tidak lagi expose sebagai API publik; ponteks dari kernel32.dll ke ntdll
+kernel.appcore.dll|Lapis user-mode untukclave AppModel seperti activation package dan identitas aplikasi
+hal.dll|Hardware Abstraction Layer; menjembatani kernel ke driver perangkat keras tertentu
+win32u.dll|NtUser dan NtGdi di mode user; semua panggilan USER dan GDI melewati DLL ini
+wow64.dll|Wow64 engine 64-bit pada Windows 64-bit untuk memproses kode 32-bit
+wow64cpu.dll|Wow64 CPU emulation untuk mesin 64-bit yang menjalankan image 32-bit
+wow64win.dll|Lapisan Wow64 untuk Win32 API pada proses 32-bit di OS 64-bit
+wow64con.dll|Lapisan konsol Wow64 untuk aplikasi konsol 32-bit di OS 64-bit
+wow64base.dll|Bagian dasar Wow64 yang dipakai Wow64cpu dan Wow64win
+msvcrt.dll|C Runtime Library bawaan Visual C++ untuk aplikasi lawas; sering muncul di PATH lebih dulu dari UCRT
+ucrtbase.dll|Universal C Runtime; implementasi C runtime modern yang dipakai vcruntime140.dll
+vcruntime140.dll|Runtime Visual C++ 14x; inisialisasi runtime, atexit, buffer, dan new/delete
+vcruntime140_1.dll|Runtime Visual C++ 14x dengan dukungan eksponensial threading
+vcruntime140_threads.dll|Runtime Visual C++ untuk aplikasi multithreaded
+msvcp140.dll|Standard C++ Library Microsoft; std::string, vector, dan container
+msvcp140_1.dll|Bagian Standard C++ Library dengan fitur tambahan
+msvcp140_2.dll|Bagian Standard C++ Library dengan fitur tambahan lanjutan
+msvcp140_atomic_wait.dll|Fungsi atomic wait C++20 std::atomic::wait untuk runtime Visual C++
+msvcp140_codecvt_ids.dll|Tabel ID codecvt C++17 yang dipakai runtime Visual C++
+vcomp140.dll|OpenMP runtime Visual C++ 14x untuk loop paralel
+concrt140.dll|Concurrency Runtime Visual C++ 14x; PPL, agent, dan thread pool
+msvcp100.dll|Standard C++ Library Visual C++ 2010 untuk aplikasi lama
+msvcr100.dll|C Runtime Visual C++ 2010 untuk aplikasi lama
+msvcp120.dll|Standard C++ Library Visual C++ 2013
+msvcr120.dll|C Runtime Visual C++ 2013
+msvcp_win.dll|Legasi C Runtime Visual C++ untuk aplikasi lawas pra-2010
+vcomp120.dll|OpenMP runtime Visual C++ 2013
+vcamp120.dll|OpenMP AMP runtime Visual C++ 2013 untuk GPU
+vcamp140.dll|OpenMP AMP runtime Visual C++ 14x untuk GPU
+vccorlib120.dll|Core Library Visual C++ 2013 untuk aplikasi Store dan C++
+vccorlib140.dll|Core Library Visual C++ 14x untuk aplikasi Store dan C++
+atl.dll|Active Template Library; pengatur Registration dan Smart Pointer COM
+atl100.dll|Active Template Library untuk aplikasi lawas Visual C++ 2010
+atlthunk.dll|Shim ATL untuk aplikasi lawas
+mfc140.dll|Microsoft Foundation Classes versi 14x untuk dialog dan dokumen
+mfc140u.dll|MFC Unicode versi 14x
+mfcm140.dll|MFC Feature Pack versi 14x
+user32.dll|Multi-User Windows USER API Client DLL; CreateWindow, MessageBox, keyboard, mouse, dan GUI
+gdi32.dll|Graphics Device Interface untuk gambar 2D, font, region, dan printer DC
+gdi32full.dll|Implementasi GDI mode user yang dimuat untuk menutupi kernel graphics stack
+GdiPlus.dll|GDI+ untuk gambar vektor, transformasi, dan pemrosesan image lanjutan
+dwmapi.dll|Desktop Window Manager Composition API untuk Effects Framework danPresentasi
+dwmcore.dll|Komposisi dan animasi DWM internal
+uDWM.dll|API internal Desktop Window Manager untuk fitur tampilan lanjutan
+uxtheme.dll|Visual Styles Windows untuk tema Aero pada kontrol common
+uxlib.dll|Pustaka UI internal untuk shell Windows
+uireng.dll|Mesin render UI internal untuk shell Windows
+imm32.dll|Input Method Manager untuk input multibahasa dan IME
+comctl32.dll|Common Controls untuk toolbar, status bar, tree view, list view, dan progress bar
+comdlg32.dll|Common Dialogs untuk Open, Save, Print, Font, Color, dan Browse
+shell32.dll|Windows Shell Common DLL; ShellExecute, shell path, dan operasi file Explorer
+shlwapi.dll|Shell Lightweight Utility; path, URL, registry, dan bargaining string
+propsys.dll|Property System untuk metadata file dan item shell
+oleacc.dll|Active Accessibility API; exposes UI aplikasi ke screen reader
+UIAutomationCore.dll|UI Automation core; fondasi Microsoft UI Automation untuk tool aksesibilitas dan otomasi
+msctf.dll|Text Services Framework untuk IME, font linking, dan text service
+usp10.dll|Uniscribe; shaping dan bidirectional teks untuk Uniscribe dan DirectWrite
+twinapi.dll|Windows Runtime API projection untuk aplikasi Win32
+twinui.dll|Windows shell UI internal untuk tampilan Windows 10 dan 11
+directmanipulation.dll|Direct Manipulation API untuk interaksi transformasi pada DirectUI
+shcore.dll|Scale and Core helper; DPI, monitors, dan framework shell
+SHCore.dll|Scale and Core helper untuk DPI dan shell framework
+shfolder.dll|Folder shell path dan ID folder khusus seperti Desktop dan Documents
+shdocvw.dll|Shell Doc Object View; handler preview untuk file Office, PDF, dan gambar
+shimgvw.dll|Shell Image Viewer untuk preview gambar di Explorer
+shpafact.dll|Shell Pre Application Factory untuk handler shell
+shsetup.dll|Shell setup helper untuk lokasi folder shell
+shsvcs.dll|Shell services helper untuk DCOM dan shell
+ExplorerFrame.dll|Explorer frame shell untuk preview handler dan hosting Explorer
+DesktopShellExt.dll|Shell extension engine untuk Desktop dan File Explorer
+thumbcache.dll|Thumbnail cache Explorer untuk preview gambar dan dokumen
+dcomp.dll|DirectComposition untuk komposisi GPU pada DirectX
+StructuredQuery.dll|Parser Structured Query Language untuk pencarian Windows
+sechost.dll|Service Execution Host API; dipakai svchost.exe untuk menjalankan service DLL
+profapi.dll|User Profile API untuk profil pengguna, token, dan pemetaan Known Folder
+userenv.dll|User Environment API untuk profil, environment, dan group user
+powrprof.dll|Power API untuk电源 power scheme, suspend, dan battery
+apphelp.dll|Application compatibility helper untuk shim aplikasi lawas
+imagehlp.dll|PE image helper untuk mapping, unmapping, dan validasi executable
+version.dll|Version Information API untuk membaca metadata versi file
+WinTypes.dll|Tipe dasar Windows dan konstanta yang dipakai banyak DLL lain
+d3d11.dll|Direct3D 11 runtime untuk render 3D dan compute
+d3d11on12.dll|Direct3D 11 yang berjalan di atas Direct3D 12 untuk perangkat lama
+D3D12.dll|Direct3D 12 runtime untuk render 3D dan compute
+D3D12Core.dll|Direct3D 12 core library; shader compiler runtime dan core shader models
+dxgi.dll|DirectX Graphics Infrastructure untuk swap chain, adapter, dan output
+d3d9.dll|Direct3D 9 runtime untuk game dan aplikasi lama
+d3d9on12.dll|Direct3D 9 yang berjalan di atas Direct3D 12
+d3d10warp.dll|Direct3D 10 software rasterizer WARP tanpa GPU
+D3DCompiler_47.dll|Kompiler shader HLSL bawaan untuk Direct3D
+dwrite.dll|DirectWrite untuk rendering teks modern, shaping, dan font fallback
+DWrite.dll|DirectWrite untuk rendering teks, shaping, dan font fallback
+DXCore.dll|DXCore API baru untuk-"
+dxva2.dll|DirectX Video Acceleration; akselerasi decode video di GPU
+D3DSCache.dll|Cache shader Direct3D untuk mempercepat kompilasi
+d3dcsx_43.dll|CS Xbox shader cache runtime
+Direct2DDesktop.dll|Direct2D Desktop compositing untuk shell dan apl
+directml.dll|DirectML untuk akselerasi machine learning di GPU
+WindowsCodecs.dll|Windows Imaging Component untuk decode dan encode WIC image
+opengl32.dll|OpenGL 1.1 implementation bawaan Windows untuk game lawas
+glu32.dll|OpenGL Utility Library untuk textured object dan quadrics
+vulkan-1.dll|Vulkan 1.0 loader untuk game dan aplikasi 3D
+opencl.dll|OpenCL ICD loader untuk komputasi paralel GPU
+dxdiagn.dll|Engine diagnostik DirectX untuk dxdiag.exe
+Microsoft.Internal.WarpPal.dll|WARP atau Windows Advanced Rasterization Platform Presentation Abstraction Layer
+mfplat.dll|Media Foundation Platform; fondasi framework multimedia Windows
+mfreadwrite.dll|Media Foundation Source Reader dan Sink Reader Writer untuk streaming media
+mf.dll|Media Foundation internal untuk MOM dan pipeline
+mfcore.dll|Media Foundation core untuk decoding, encoding, dan sink source
+MFPlay.dll|Media Foundation Playback engine untuk pemutar media
+mfperfhelper.dll|Helper performa Media Foundation
+MediaFoundationAggregator.dll|Agregator Media Foundation untuk menyatukan multipleMF audio dan video paths
+avrt.dll| Multimedia Class Scheduler untukgabe real-time priority pada audio dan video
+avifil32.dll|AVI File support untuk kompresi dan playback video lawas
+avicap32.dll|Video Capture untuk pembacaan webcam dan video capture
+winmm.dll|Windows Multimedia untuk playback audio, joystick, dan timer
+winmmbase.dll|Implementasi dasar multimedia yang dipakai aplikasi 32-bit
+msvfw32.dll|Video for Windows; API AVI untuk kompresi, capture, dan playback video lawas
+msacm32.dll|Audio Compression Manager untuk codec audio lawas
+mciavi32.dll|Media Command Interface untuk AVI
+dsound.dll|DirectSound untuk audio latency rendah
+MMDevAPI.dll|Multimedia Device API untuk enumerasi dan aktivasi perangkat audio
+mmgaclient.dll|Multimedia Graph Client untuk DirectShow
+evr.dll|Enhanced Video Renderer untuk video playback berbasis Direct3D
+dxtmsft.dll|DirectShow Transform untuk decode dan encode video
+qedit.dll|DirectShow Editing Services untuk authoring video lawas
+dinput.dll|DirectInput versi lama untuk joystick dan kontrol game
+dinput8.dll|DirectInput 8 untuk joystick, keyboard, dan mouse game
+input.dll|Input API internal untuk keyboard, mouse, dan HID
+hid.dll|Human Interface Device API untuk perangkat input kelas HID
+XInput1_4.dll|XInput API 1.4 untuk Xbox controller
+XInput9_1_0.dll|XInput API 9.1 untuk Xbox controller pada Windows 8 ke atas
+xinput1_3.dll|XInput API 1.3 untuk Xbox 360 controller
+XInputUap.dll|XInput bridge untuk aplikasi Store
+GameInput.dll|GameInput API baru untuk controller dan input perangkat
+ws2_32.dll|Winsock 2; socket, connect, send, recv, DNS resolve untuk TCP dan UDP
+wsock32.dll|Winsock 1.1 helper untuk aplikasi lawas
+mswsock.dll|Extensions Winsock untuk operasi socket lanjutan
+winhttp.dll|WinHTTP API untuk request HTTP dan HTTPS pada service dan aplikasi
+wininet.dll|WinINet API untuk protokol Internet di level pengguna
+urlmon.dll|URL Moniker untuk browsing web berbasis WinINet dan MIME
+dnsapi.dll|DNS Client API untuk resolusi nama host
+IPHLPAPI.DLL|IP Helper API untuk tabel routing, adapter, dan statistik IP
+iphlpsvc.dll|IP Helper service untuk konfigurasi IP dan statistik
+netapi32.dll|Network Management API untuk user, group, share, danWkstation
+httpapi.dll|Kernel-mode HTTP API untuk filter mode user dan.sys HTTP
+FirewallAPI.dll|Windows Firewall API untuk rule inbound dan outbound
+wldap32.dll|LDAP Client API untuk Active Directory
+rasapi32.dll|Remote Access Service API untuk VPN dan dialing
+rasman.dll|Remote Access Manager untuk koneksi modem, VPN, dan拨 dial
+mpr.dll|Multiple Provider Router atau WNet untuk UNC path, drive mapping, dan network resource
+netman.dll|Network Manager service untuk enumerasi koneksi
+netprofm.dll|Network Profile Manager untukadie-$ profil jaringan
+snmpapi.dll|SNMP API untuk manajemen perangkat jaringan
+wsnmp32.dll|SNMP extension API
+mshtml.dll|HTML component lawas untuk Trident dan IE mode
+mshtmled.dll|HTML editing component untuk edit control lawas
+Chakra.dll|JavaScript engine browser lama untuk mode IE
+edgehtml.dll|HTML engine Microsoft Edge untuk render konten web
+iertutil.dll|URL utility Internet untuk parsing dan escaping URL
+ncsi.dll|Network Connectivity Status Indicator untuk deteksi koneksi internet
+ncbservice.dll|NetBIOS service untuk browsing dan nama NetBIOS
+netbios.dll|NetBIOS API untuk sesi named pipe
+NTlanman.dll|Workstation dan Server API untuk Windows networking
+wkssvc.dll|Workstation service untuk berbagi sumber daya
+srvcli.dll|RPC client untuk remote registry, event log, dan service
+ipnathlp.dll|IP NAT helper untuk port mapping
+tapi32.dll|Telephony Application Programming Interface untuk modem dan VoIP
+icmp.dll|ICMP API untuk ping dan diagnosis jalur
+HNetCfgClient.dll|Shell extension untuk Network Connections pada Control Panel
+networkhelper.dll|Network Connections folder dan dialog status koneksi
+Wlanapi.dll|WLAN API untuk enumerasi dan konfigurasi Wi-Fi
+wlansvc.dll|WLAN AutoConfig service untuk koneksi Wi-Fi
+wlansec.dll|WLAN security layer untuk WPA dan autentikasi
+WWanAPI.dll|APIWWAN untuk perangkat seluler dan hotspot
+MPSSVC.dll|Mobile Broadband Service untuk koneksi data seluler
+netiohlp.dll|Network I/O helper untuk Winsock
+iprtprio.dll|QoS-aware I/O untuk preemptive network I/O
+IKEEXT.DLL|Internet Key Exchange untuk VPN IPsec
+vpnike.dll|VPN IKE engine untuk、Windows VPN
+NapCRYPT.DLL|Network Access Protection cryptography untuk NAP
+advapi32.dll|Advanced Windows 32 Base API untuk registry, security, service, kredensial, dan akun
+bcrypt.dll|Base Cryptography API untuk AES, RSA, hashing, dan key storage
+bcryptprimitives.dll|Primitif kriptografi internal untuk bcrypt.dll
+ncrypt.dll|Key Storage Provider API untuk sertifikat dan kunci privat
+crypt32.dll|Cryptographic API untuk sertifikat, PKI, encoding, dan message
+wintrust.dll|WinTrust untuk verifikasi Authenticode dan katalog driver
+secur32.dll|Security Support Provider API untuk autentikasi jaringan seperti Negotiate
+sspicli.dll|Klien Security Support Provider Interface untuk autentikasi SSPI
+sspisrv.dll|Security Support Provider service untuk NTLM, Kerberos, dan CredSSP
+lsasrv.dll|Local Security Authority server untuk policy, akun, dan SID
+lsaadt.dll|LSA audit dan tracking untuk logon
+samlib.dll|Security Account Manager client API untuk user, group, dan alias
+samsrv.dll|Security Account Manager service untuk database akun
+netlogon.dll|Netlogon API untuk operasi domain trust dan kredensial
+vaultcli.dll|Vault client untuk Windows Vault API
+Vault.dll|Windows Vault API untuk penyimpanan kredensial terenkripsi
+credssp.dll|CredSSP provider untuk autentikasi delegasi remote
+keyiso.dll|Key Isolation API untuk?-isolated credential process
+cryptsp.dll|Cryptographic Service Provider untuk?-crypto lawas
+cryptbase.dll|Cryptographic base provider internal untuk-kriptografi Windows
+cryptdlg.dll|Certificate selection dialog untuk memilih sertifikat
+cryptui.dll|Cryptographic UI untuk dialog sertifikat dan-/kep??
+credui.dll|Credential UI untuk dialog PIN, smart card, dan Certificate
+softpub.dll|Software Publisher untuk verifikasi-”Publish” provider
+msasn1.dll|ASN.1 encoder dan decoder untuk sertifikat X.509
+schannel.dll|Secure Channel untuk TLS dan SSL pada Windows
+authz.dll|Authorization API untuk access check berbasis SID dan token
+authui.dll|Authentication UI untuk dialog logon jaringan
+capauthz.dll|Capability authorization untuk-/AppContainer capability check
+TokenBroker.dll|Token Broker untuk mendelegasikan akses token ke app terisolasi
+credprovs.dll|Credential Provider untuk layar logon dan dialog kredensial
+cxcredprov.dll|Credential provider untuk Common Dialog Select
+wdigest.dll|Web Digest Authentication untuk Digest di bawah NTLM
+dsreg.dll|Azure AD Device Registration API
+offlinelsa.dll|LSA untuk logon offline pada komputer yang tidak在场 terhubung domain
+offlinesam.dll|SAM untuk account resolution offline
+pku2u.dll|SSO USER to USER mapping untuk-/autentikasi lintas的用户 domain
+rsaenh.dll|RSA Enhanced Provider untuk kriptografi asimetris
+dpapi.dll|Data Protection API untukenkripsi data per pengguna atau per mesin
+dpapisrv.dll|Data Protection API service untukenkripsi roaming profile
+cryptxml.dll|Cryptographic XML untuk signature XML
+cngcredui.dll|CNG credential UI untuk sertifikat dan smart card
+cngprovider.dll|CNG provider untuk kriptografi berbasis CNG
+KdsCli.dll|KDS Client untuk key data servicing pada AD FSMO
+kdcom.dll|Kernel Debugger COM interface untuk-/remote kernel debugging
+kdnet.dll|Kernel Debugger transport network untuk-/remote debugging via TCP atau UDP
+kdstub.dll|Kernel Debugger stub untuk-/debugging awal
+fltlib.dll|Filter Manager library untukCommunication minifilter dan filter driver
+fveapi.dll|File Virtualization Engine API untuk BitLocker
+cscapi.dll|Client Side Caching API untuk Offline Files
+StorageUsage.dll|Storage usage API untuk statistik penyimpanan
+storagewmi.dll|Storage Management WMI provider untuk storage hardware
+defragproxy.dll|Defrag proxy untuk Defragmenter API
+ulib.dll|Volume library internal untuk-/format FAT, NTFS, dan ReFS
+ufat.dll|FAT filesystem library internal
+uexfat.dll|exFAT filesystem library internal
+untfs.dll|NTFS library internal untuk volume manager
+uReFS.dll|ReFS library internal
+WofUtil.dll|Windows Overlay Filter utility untuk WIM dan file hardlink
+WofTasks.dll|Background task untuk维护 Windows Overlay Filter
+devobj.dll|Device Object Manager untuk Nodevice install
+cfgmgr32.dll|Configuration Manager API untukPnP device enumeration
+setupapi.dll|Setup API untuk instalasi dan konfigurasi driver perangkat
+spoolss.dll|Print Spooler service API untuk antrean dan printer
+printui.dll|Printer UI helper untuk dialog printer
+PrintNotification.dll|Notifikasi spooler untuk event printer
+PrintRenderAPIHost.dll|Host untuk Windows 10 XPS Print Renderer untuk printer modern
+PrinterServicesAdapter.dll|Adapter layanan cetak untuk-_Windows Update printer
+printfilterpipelineprxy.dll|Proxy Print Filter Pipeline untuk-_driver filter
+PrintIsolationProxy.dll|Proxy Print Isolation untuk-_printing job
+PrintWSDAHost.dll|Host Windows Store Device Access untuk-_printing
+PrintWorkflowService.dll|Layanan Print Workflow untuk-_custom workflow
+PrintScanBrokerService.dll|Broker pemindaian dan pencetakan untuk-_imaging
+msi.dll|Windows Installer API untuk paket MSI dan-_instalasi aplikasi
+odbc32.dll|ODBC driver manager untuk koneksi database
+odbccp32.dll|ODBC connection pool dan-_setup
+sqlsrv32.dll|SQL Server ODBC driver bawaan Windows
+winsqlite3.dll|SQLite3 library untuk-/Windows Data dan-_app tersemat
+esent.dll|Extensible Storage Engine untuk database structured store Windows
+cabapi.dll|Cabinet API untuk arsip CAB
+cabinet.dll|Cabinet file implementation untuk arsip CAB
+dbghelp.dll|Debug Help Library untuk simbol, stack trace, dan minidump
+dbgcore.dll|Debug Core API untuk membaca minidump dan memory dump
+DbgModel.dll|Debug Data Model API untuk mengekstrak informasi dari dump
+dbgeng.dll|Debug Engine API untuk debugger kernel dan user mode
+psapi.dll|Process Status API untuk enumerasi modul dan process info
+pdh.dll|Performance Data Helper untuk performance counters
+verifier.dll|Verifier API untuk-/Application Verifier
+wer.dll|Windows Error Reporting API untuk membuat laporan error
+wevtapi.dll|Windows Event Log API untuk menulis dan membaca event
+wmi.dll|Management Instrumentation Technology host
+wbemcomn.dll|WMI shared utility untuk-_WMI subsystem
+diagtrack.dll|Diagnostic Data Collector;-)mengirim telemetri ke Microsoft
+DiagSvc? = DiagSvc.dll
+sysmain.dll|SysMain atau Superfetch untuk prefetch dan defragmentasi background
+syssetup.dll|System Setup library untuk instalasi Windows
+SysFxUI.dll|Audio Effects UI untuk-"pengaturan enhancements sound card"
+mscoree.dll|.NET Framework Execution Engine untuk CLR hosting dan unmanaged COM interop
+mscorier.dll|.NET Framework IErrorInfo implementation untuk COM interop
+mscories.dll|.NET Framework IExceptionInformation untuk COM interop
+clrhost.dll|.NET CLR host helper untuk hosting the CLR runtime
+Normaliz.dll|Unicode Normalization Form untuk case dan sorting international
+Nlsdl.dll|National Language Support Dynamic Library untuk locale data
+getuname.dll|Unicode name lookup untuk-/semua nama karakter
+NlsData0000.dll|Data tabel NLS yang dikompilasi untuk locale sistem
+mlang.dll|MLang encoding dan font linking untuk East Asian text
+BCP47Langs.dll|Pemetaan nama bahasa BCP 47 ke-/locale Windows
+iscsidsc.dll|iSCSI Discovery Service API
+iscsilog.dll|iSCSI logging untuk troubleshooting iSCSI
+iscsiwmi.dll|iSCSI WMI provider untuk konfigurasi storage iSCSI
+iscsiwmiv2.dll|iSCSI WMI provider versi 2
+iscsium.dll|iSCSI User Mode library untuk-/Microsoft iSCSI initiator
+UefiCsp.dll|Cryptographic Service Provider untuk UEFI secure boot variable
+sxs.dll|Side-by-Side assembly loader untuk-_WinSxS manifest resolution
+sxshared.dll|Shared SxS utility untuk component store
+sxsstore.dll|SxS component store manager
+sxssrv.dll|SxS service untuk component store servicing
+AppxPackaging.dll|MSIX atau Appx packaging API untuk paket aplikasi
+kdcom.dll|Kernel debugger COM interface
+mvsc? = clrhost.dll
+hspapi.dll|HSP API untuk Home Service Provider pada-_modem
+iodbc? = odbc32.dll
+plutonapi.dll|API klien untuk Microsoft Pluton security processor yang terintegrasi di CPU
+plutonksp.dll|Key Storage Provider untuk kunci kriptografik di-_Pluton
+plutonfw_AuthenticAMD.dll|Firmware image Pluton untuk platform AMD
+plutonfw_GenuineIntel.dll|Firmware image Pluton untuk platform Intel
+plutonfw_hspv2_AuthenticAMD.dll|Firmware image Pluton HSP versi 2 untuk platform AMD
+secfw_AuthenticAMD.dll|Firmware keamanan untuk-_secure boot AMD
+secfw_GenuineIntel.dll|Firmware keamanan untuk-_secure boot Intel
+mcupdate_AuthenticAMD.dll|Microcode update AMD untuk-_processor security mitigations
+mcupdate_GenuineIntel.dll|Microcode update Intel untuk-_processor security mitigations
+IsoSessionCore.dll|Core library Win32 app isolation untuk-_isolated build sessions
+IsoSessionClient.dll|Klien library untuk-_isolated sessions Win32 app isolation
+IsoSessionServer.dll|Server library untuk-_isolated sessions Win32 app isolation
+IsoSessionApp.dll|Antarmuka aplikasi_-API IsolationSession Windows.AI
+IsoSessionCoreServer.dll|Server core Isolation Environment Broker
+IsoSessionProxyStub.dll|Proxy stub untuk-_isolated session COM interfaces
+libcrypto.dll|Implementasi OpenSSL untuk operasi kriptografi
+libcrypto-4-x64.dll|Implementasi OpenSSL 64-bit untuk-/kritografi
+libssl-4-x64.dll|Implementasi OpenSSL TLS 64-bit untuk-_protocol library
+liblouis.dll|liblouis screen reader translator untuk-_accessibility braille
+libsmartscreenn.dll|Native library SmartScreen untuk-_reputation check
+smartscreen.dll|Microsoft Defender SmartScreen untuk proteksi reputasi
+IccLibDll_x64.dll|ICC color management library untuk-_color profiles
+camext.dll|Extension kamera untuk-_Windows Camera app
+CameraCaptureUI.dll|UI dialog Camera Capture untuk-_pengambilan foto
+WebcamUi.dll|UI webcam untuk-_pengaturan dan preview
+EsclScan.dll|dukungan scanner eSCL atau AirScan untuk-_imaging devices
+DnsClientCSP.dll|Cryptographic Service Provider untuk-/DNS Client
+dplcsp.dll|Cryptographic Service Provider untuk-/DPAPI LSA
+KeyboardFilterCSP.dll|Cryptographic Service Provider untuk-_Keyboard Filter
+CrossDeviceVirtualCameraSource.dll|Sumber virtual camera lintas perangkat untuk Studio Effects
+DMRCDecoder.dll|Decoder DRM Content untuk-_playback media terproteksi
+rgb9rast.dll|Legacy RGB9 framebuffer rasterizer untuk-_Direct3D 9
+TaskManagerDataLayer.dll|Data layer Task Manager untuk-_process dan-_performance metrics
+ThreatAssessment.dll|API penilaian ancaman untuk-_SmartScreen dan Defender
+ThreatResponseEngine.dll|Mesin respons ancaman Microsoft Defender
+appfootprint.dll|Jejak penggunaan aplikasi untuk-_Storage Sense
+AIComponentMgmt.dll|Manajemen komponen AI untuk-_Windows AI platform
+Windows.AI.Agents.dll|API Windows AI Agents untuk-_Copilot dan agent lokal
+Windows.Internal.AI.PlatformCapability.dll|Deteksi kapabilitas AI platform untuk-_fitur AI Windows
+BluetoothOppPushClient.dll|Klien Bluetooth Object Push untuk-_transfer file
+BluetoothApis.dll|API Bluetooth untuk-_device pairing dan enumeration
+bthserv.dll|Bluetooth service untuk-/device management
+BcastDVRClient.dll|Client Recorded TV untuk-_broadcast TV Windows
+BcastDVRCommon.dll|Shared library Recorded TV untuk-/broadcast TV Windows
+bcastdvr.proxy.dll|Proxy Recorded TV untuk-_shell broadcast
+CloudExperienceHost.dll|Shell host OOBE cloud untuk-_penyiapan akun Microsoft
+cloudidsvc.dll|Cloud ID service untuk-_OSP to AAD migration
+CloudExperienceHostUser.dll|User mode Cloud Experience Host
+CompatAggregator.dll|Agregator telemetry kompatibilitas aplikasi
+wtdccm.dll|Komponen internal Microsoft tanpa-_dokumentasi publik
+whesvc.dll|Komponen internal Microsoft tanpa-_dokumentasi publik
+whesvc_assets.dll|Aset untuk-_whesvc service
+whealogr.dll|Logger untuk-_Windows hardware error services
+whhelper.dll|Helper untuk-_Windows hardware error services
+ztdnsapi.dll|DNS API pihak ketiga yang-_dibundel di system32
+OSClient.API.dll|API klien OS untuk-_manajemen perangkat
+ncobjapi.dll|API objek konfigurasi jaringan untuk-_Network Configuration Manager
+UXFrame.dll|Framework UX untuk-_Windows Settings shell
+WinUICohabitation.dll|Lapisan cohabitation WinUI untuk-_hosting WinUI di WPF dan WinForms
+uwfservicingapi.dll|API servicing untuk Update Workflow Framework
+genpix.dll|Komponen internal Microsoft untuk-_pemrosesan gambar
+aidd.dll|Komponen internal Microsoft untuk-_device discovery
+hotpatchutil.dll|Utilitas hotpatching Windows untuk-_servicing tanpa restart
+directsr.dll|DirectSR Screen Rendering untuk-_rendering off-screen lawas
+ztrace_maps.dll|Map diagnostik ZTrace untuk-_performance tracing
+xboxgipsynthetic.dll|Input Xbox sintetis untuk-_pengujian dan remote play
+sfc_os.dll|Implementasi internal System File Checker
+sfe? = sfscore.dll
+AppxSip.dll|Subject Interface Package handler untuk-/APK dan-/surgical packages
+encrypt? = crypt32.dll
+fltLib? = fltlib.dll
+Sensor | = SensorsApi.dll
+SensorsApi.dll|Sensors API untuk-_accelerometer, GPS, dan ambient light
+SensorsUtilsV2.dll|Utilitas Sensors untuk-_sensor aggregator
+sensrsvc.dll|Windows Event Sound service untuk-_sistem suara
+PeopleAPIs.dll|People API untuk-_kontak pada Windows
+PeopleBand.dll|Band People experience untuk-_quick contacts
+NotificationController.dll|Pusat notifikasi Action Center untuk-_Windows notifications
+notificationplatformcomponent.dll|Platform component notifikasi untuk-_toast dan-_background
+NotificationIntelligencePlatform.dll|Platform kecerdasan notifikasi untuk-_peng prioritise notification
+StateRepository.Core.dll|Core State Repository untuk-_Settings dan-/app data
+SystemSettings.DataModel.dll|Data model Windows Settings untuk-_pengaturan sistem
+UXInit.dll|Inisialisasi UX framework untuk-_Windows Settings
+SystemUWPLauncher.exe|Launcher aplikasi UWP dari-_system context
+wns? = wsnmp32.dll
+webthreatdefsvc.dll|Layanan proteksi ancaman web pihak ketiga yang-_dibundel vendor keamanan
+webthreatdefusersvc.dll|Layanan proteksi ancaman web pengguna pihak ketiga
+igdumd64.dll|Driver Intel Graphics mode user untuk-_HD Graphics
+igfxhdc? = iglhcp64.dll
+ig4icd64.dll|Intel Graphics ICD OpenCL untuk-_OpenCL on Intel GPU
+xl? = xwizard.dll
+printticketvalidation.dll|Validasi tiket cetak untuk-_Universal Print
+Graph? = Direct2DDesktop.dll
+SecureBoot? = UefiCsp.dll
+tbs.dll|TPM Base Services untuk-_TPM 2.0 command
+TpmCoreProvisioning.dll|Provisioning TPM untuk-_Windows Hello
+TpmTasks.dll|Tugas terjadwal TPM untuk-_pembaruan firmware TPM
+webauthn.dll|WebAuthn API untuk-_FIDO2 passkey dan-_Windows Hello
+winbio.dll|Windows Biometric API untuk-_fingerprint dan-_face
+WinBioDataModel.dll|Data model biometrik untuk-_enrollment biometrik
+facecredentialprovider.dll|Credential provider Windows Hello untuk-_face recognition
+fingerprintcredential.dll|Credential provider untuk-_fingerprint
+BioCredProv.dll|Biometric credential provider host
+LogonUI? = LogonUI.exe
+Theme | = uxtheme.dll
+ImmersiveControlPanel? = control.exe
+FilterManager? = fltlib.dll
+MUI? = normaliz.dll
+uac? = consent.exe
+networklist? = NetworkListManager.dll
+oleaut32.dll|OLE Automation API; TypeInfo, Variant, dan IDispatch untuk otomasi Excel atau Word dari script
+usermgr.dll|User Manager service API untuk manajemen profil pengguna
+MitigationClient.dll|Klien layanan mitigasi sistem untuk Exploit Protection
+MosHostClient.dll|Klien host MOS untuk Update dan telemetry
+MusUpdateHandlers.dll|Handler pembaruan untuk Microsoft Update pada proses servicing
+PersonalizationCSP.dll|Configuration Service Provider untuk pengaturan personalisasi dan privasi
+QuietHours.dll|Fitur Quiet Hours untuk menahan notifikasi
+RDXService.dll|Layanan Remote Desktop Experience untuk sesi desktop paralel
+RDXTaskFactory.dll|Task factory untuk Remote Desktop Experience
+UiaManager.dll|Manajer UI Automation internal untuk aksesibilitas
+ThreatExperienceManager.dll|Manajer pengalaman ancaman Microsoft Defender
+TransferTargets.dll|Target transfer file untuk fitur berbagi di shell
+ShareTargets.dll|Handler shell target berbagi untuk Near Share
+RegCtrl.dll|Helper Control Panel untuk registry
+SettingSyncDownloadHelper.dll|Helper unduhan untuk sinkronisasi pengaturan
+OEMDefaultAssociations.dll|Asosiasi file default bawaan OEM untuk shell open
+PickerPlatform.dll|Platform pemilih file dan kontak untuk dialog shell
+navshutdown.dll|Shutdown dari shell navigasi untuk layar sign-in
+mssitlb.dll|OLE Structured Storage helper untuk penyimpanan data
+SDFHost.dll|Host untuk Sensor Device Framework
+SearchFolder.dll|Komponen soket untuk protokol pencarian Windows Search
+smartscreenps.dll|Layanan proteksi SmartScreen untuk policy store
+SecurityCenterBrokerPS.dll|Broker Windows Security Center untuk policy store
+TpmCertResources.dll|Resource sertifikat untuk TPM key attestation
+UsbTask.dll|Tugas latar belakang untuk pengelolaan USB
+useractivitybroker.dll|Broker aktivitas pengguna untuk timeline
+profext.dll|Extension profil pengguna untuk Windows
+profsvc.dll|User Profile Service untuk manajemen profil
+profsvcext.dll|Extension User Profile Service
+policymanagerprecheck.dll|Pemeriksaan awal Policy Manager saat instalasi aplikasi
+MosStorage.dll|Penyimpanan data untuk host MOS
+NPSM.dll|Network Policy Server Manager
