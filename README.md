@@ -3,11 +3,13 @@
 > **Halaman interaktif:** https://adyoi.github.io/system32-inventory/ - versi lengkap dengan pencarian, filter, dan sortir. Buka juga secara lokal lewat `docs\index.html` tanpa server.
 >
 > Repo dokumentasi pribadi, tidak berafiliasi dengan atau didukung Microsoft.
+>
+> Lisensi: [MIT](LICENSE). Nama produk, file, dan merek milik Microsoft; data nama, ukuran, dan versi file adalah fakta yang dihimpun dari instalasi Windows lokal.
 
 Inventaris lengkap file .exe dan .dll di C:\Windows\System32, disortir per kategori dan per nama, dengan penjelasan singkat fungsi tiap file.
 
 - **Sistem ini:** Microsoft Windows 11 Pro, versi 10.0.28000 (build 28000)
-- **Waktu generate:** 2026-10-04 04:37
+- **Waktu generate:** 2026-10-04 04:44
 - **Jumlah file:** 4267 total, yaitu 665 EXE dan 3602 DLL
 - **Total ukuran:** 2303.2 MB
 - **Sumber penjelasan:** 762 file punya penjelasan kurasi manual, 3246 file memakai FileDescription dari metadata versi, 259 file tidak punya metadata sehingga ditandai eksplisit.
@@ -166,4 +168,10 @@ Get-ChildItem C:\Windows\System32 -File |
     }
   }
 ```
+
+## Lisensi
+
+Kode generator dan dokumentasi di repo ini memakai [MIT](LICENSE), hak cipta (c) 2026 adyoi.
+
+Nama file, produk, dan merek yang disebut di sini adalah milik Microsoft; repo ini tidak berafiliasi dengan Microsoft. Data nama, ukuran, versi, dan deskripsi file merupakan fakta yang dihimpun dari instalasi Windows lokal, bukan karya cipta Microsoft.
 
